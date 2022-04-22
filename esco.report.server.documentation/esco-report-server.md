@@ -1,32 +1,32 @@
 # Esco Report Connector
 
-[![N|Solid](esco.report.server.documentation/esco.png)](https://www.sistemasesco.com.ar)
+[![N|Solid](esco.esco.report.server.documentation/esco.png)](https://www.sistemasesco.com.ar)
 
-Esco Report Connector ([**Power BI**](https://powerbi.microsoft.com/es-es/))
+Esco Report Connector by ([**Power BI**](https://powerbi.microsoft.com/es-es/))
 
-Conector que permite la interconexión directa e integración de los sistemas de ESCO (EscoAPI, Fondos y Bolsa) con el Power BI Report Server, de forma tal que puedan generarse (en diversos formatos) o visualizarse, los formularios y reportes de tipo Power BI existentes previamente desde los sistemas.
+Connector that allows direct interconnection and integration of ESCO systems (EscoAPI, Fondos and Bolsa) with the Power BI Report Server, so that existing Power BI forms and reports can be generated (in various formats) or displayed previously from systems.
 
-[![N|Solid](esco.report.server.documentation/screen.png)](https://www.sistemasesco.com.ar)
+[![N|Solid](esco.esco.report.server.documentation/screen.png)](https://www.sistemasesco.com.ar)
 
-## OBJETIVOS
-La libreria ESCO.Report.Connector permite como objetivos fundamentales:
-- Exportación de formularios y reportes de tipo PowerBI y Paginados publicados en Report Server a los formatos: PPTX, HTML, IMAGE, EXCEL, WORD, CSV, PDF y XML
-- Generación a binario de reportes y formularios (de forma unificado o en lote)
-- Visualización del reporte o formulario desde un browser embebido para su posterior exportación, envío o impresión.
+#### OBJECTIVES
+This library ESCO.Report.Connector allows as fundamental objectives:
+• Export of PowerBI and Paginated forms and reports published in Report Server to formats: PPTX, HTML, IMAGE, EXCEL, WORD, CSV, PDF and XML
+• Binary generation of reports and forms (unified or in batch)
+• Visualization of the report or form from an embedded browser for later export, sending or printing.
 
-## Esco.Report.Connector features:
-- Servicio independiente de Reportería
-- Caché y BD in memory
-- Encolado de reportes
-- Seguridad
-- Personalización
-- Almacenamiento temporal
-- Lógica de negocio 
-- Exportación a binario
+#### ESCO.Report.Connector features:
+• Independent Reporting Service
+• Cache and DB in memory
+• Report queuing
+• Security
+• Personalization
+• Temporary storage
+• Business logic
+• Export to binary
 
 
-**` EJEMPLO DE USO`**
-```r
+#### EJEMPLO DE USO
+```sh
         ReportServices report = new ReportServices("**user**", "**password**", "http://servidor/reports/");
         ExportedFile file = await report.ExportReport("**Nombre del reporte", "PDF", null, "4334");
         if (file.FileStream != Stream.Null)
